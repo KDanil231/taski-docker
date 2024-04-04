@@ -1,12 +1,12 @@
 from http import HTTPStatus
 
 from api import models
-from django.test import Client, TestCase
+from django import test
 
 
-class TaskiAPITestCase(TestCase):
+class TaskiAPITestCase(test.TestCase):
     def setUp(self):
-        self.guest_client = Client()
+        self.guest_client = test.Client()
 
     def test_list_exists(self):
         """Проверка доступности списка задач."""
